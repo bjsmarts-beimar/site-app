@@ -18,10 +18,7 @@ class Layout extends Component {
        $(function(){
 
         $('a').click(function(){  
-          
-          console.log('click');
-          console.log('$ ', $( $(this).attr('href') ).offset().top);
-
+                    
           $('html, body').stop().animate({
             scrollTop: $( $(this).attr('href') ).offset().top - 20
             }, 400);
@@ -32,39 +29,14 @@ class Layout extends Component {
         //$('.button-collapse').sideNav();
     
       }); // end of document ready
-    })(jQuery); // end of jQuery name space
-
-    
-
-    
+    })(jQuery); // end of jQuery name space        
   }
 
-  render() {
+  render() {    
 
-    var textHeader = {
-      color: "#555",
-      position: "absolute",
-      textAlign: "center",
-      top: "250px",
-      left: "140px",
-      verticalAlign: "middle",
-      width: "100%",
-      zIndex: 8
-  }
-
-    var headerGg = {
-      backgroundImage: `url(${'https://3.bp.blogspot.com/-tfJYx3gqzfU/WEWTofYzJ1I/AAAAAAAAAeA/g6GbdvUJacw_rwl246bVenNrF-A00WUTgCLcB/s1600/header.jpg'})`,      
-      backgroundPosition: "center top",
-      backgroundSsize: "cover",
-      color: "#fff",
-      float: "left",
-      height: "670px",
-      position: "relative",
-      textAlign: "center",
-      width: "100%"
+    var textHeader = { 
     }
-
-    
+        
     var divStyle = {
       "paddingLeft": "300px",
       "height": "640px"
@@ -72,23 +44,27 @@ class Layout extends Component {
 
     var homeDivStyle = {
       backgroundColor:  "#fff",
-      backgroundImage: `url(${'https://3.bp.blogspot.com/-tfJYx3gqzfU/WEWTofYzJ1I/AAAAAAAAAeA/g6GbdvUJacw_rwl246bVenNrF-A00WUTgCLcB/s1600/header.jpg'})`,
+      backgroundImage: `url(${'images/header.jpg'})`,      
       height: "640px",      
       backgroundSize: "78%",
       width: "95%",
       backgroundPositionX: "300px"
+    }    
+
+    var logoStyle = {
+      height: "60px", width: "200px", marginTop: "100px", marginBottom: "60px"
     }
 
-    var nameStyle = {
-      color: "#ff0000"
+    var homeStyle = {
+      backgroundColor: "#fff", backgroundImage: `url(${'images/header.jpg'})`, height: "670px", backgroundPosition: "center top", backgroundSize: "cover", position: "relative", textAlign: "center"
     }
 
     
     return (
       
       <div>
-          <img alt="Studio Press " height="100px;" id="Header1_headerimg" src="{images\logo.png}" width="400px;" />
           <ul id="slide-out" className="side-nav fixed">            
+            <img id="logo" src="/images/logo.png" style={logoStyle} />          
             <li><a href="#HOME">HOME</a></li>
             <li><a href="#ABOUT">ABOUT ME</a></li>
             <li><a href="#SERVICES">SERVICES</a></li>
@@ -97,15 +73,16 @@ class Layout extends Component {
           </ul>
           {/* <a href="#" data-activates="slide-out" className="button-collapse show-on-large"><i className="material-icons">menu</i></a> */}
 
-          <div id="HOME" style={homeDivStyle}>
-            <div style={textHeader}>
+          <div id="HOME" className="header-bg" style={homeStyle}>
+          <div style={{color: "#555", position: "absolute", textAlign: "center", top: "300px", left: "0px", verticalAlign: "middle", width: "100%", zIndex: 8, fontFamily: "fantasy", fontSize: "77px", fontWeight: "800" }}>
             <h2>
-              HI, I&#8217;M 
-              <span style={nameStyle}>
+              HI, I&#8217;M <br/>
+              <span style={{color: "#ff0000"}}>
                 Beimar Medina
               </span>
             </h2>
-            </div>
+          </div>
+            
           </div>                    
 
           <article style={divStyle}>
