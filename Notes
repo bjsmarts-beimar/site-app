@@ -16,6 +16,7 @@ https://codepen.io/bumbeishvili/pen/mELrdX
 
 npm install jquery --save
 npm install react-materialize --save
+npm install materialize-css --save 
 
 <!-- Import Google Icon Font & materialize.css -->
 <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">

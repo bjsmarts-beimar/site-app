@@ -1,19 +1,40 @@
+
 header, main, footer {
-    padding-left: 300px;
+    padding-left: 300px; 
 }
 
 .header-bg {  
-  margin-left: 260px !important;
+  margin-left: 300px !important;
   width: 80% !important;
+}
+.logo-bg {
+  height: 60px; 
+  width: 200px; 
+  margin-Top: 100px; 
+  margin-Bottom: 60px;
+}
+
+.button-collapse-bg {
+  background-color: #ff0000;
+  color: white;
+  padding-top: 10px;
+  display: none !important; 
 }
 
 @media only screen and (max-width : 992px) {
   header, main, footer {
-    padding-left: 0;
+    padding-left: 0;    
   }
 
   .header-bg {
     margin-left: 0 !important;
     width: 100% !important;
+  }
+
+  .button-collapse-bg {
+    background-color: #ff0000;
+    color: white;
+    padding-top: 10px;
+    display: block !important; 
   }
 }
